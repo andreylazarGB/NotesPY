@@ -1,3 +1,5 @@
+import datetime
+
 PATH = 'notes.txt'
 notes_book = {}
 
@@ -10,6 +12,7 @@ def open_file():
         note = note.strip().split(';')
         notes_book[i] = note
 
+
 def sort_file():
     global notes_book
     data = []
@@ -17,7 +20,7 @@ def sort_file():
         note = ';'.join(note)
         data.append(note)
     date_notes = list(map(lambda x: x.strip().split(';'), data))
-    date_notes.sort(key = lambda x: x[1])
+    date_notes.sort(key=lambda x: x[1])
     for i, note in enumerate(date_notes, 1):  # начало enumerate  с 1
         notes_book[i] = note
 

@@ -26,7 +26,7 @@ def show_book(book: dict[int, list[str]], msg: str):
         print('\n' + '*' * 67)
         for i, note in book.items():
             print(
-                f'{i:>3}. {note[0]:<20} {note[1]:<20} {note[2]:<20}')  # i ровняем по правому краю и выделяем ему 3 символа
+                f'{i:>3}. {note[0]:<10} {note[1]:<30} {note[2]:<20}')  # i ровняем по правому краю и выделяем ему 3 символа
         print('*' * 67 + '\n')
     else:
         print_message(msg)
